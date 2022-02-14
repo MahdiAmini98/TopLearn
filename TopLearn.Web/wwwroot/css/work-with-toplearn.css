@@ -1,0 +1,422 @@
+/*! CSS Used from: https://toplearn.com/Site/css/site.min.css?v=dyotqSbk6CPfnv6T4boCSYbtwCzlugLj0NsK61ODCeo */
+
+header,
+section {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+h1 {
+    margin: .67em 0;
+    font-size: 2em;
+}
+
+@media print {
+    *,
+    :after,
+    :before {
+        color: #000!important;
+        text-shadow: none!important;
+        background: 0 0!important;
+        -webkit-box-shadow: none!important;
+        box-shadow: none!important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+h1 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.container:after,
+.container:before {
+    display: table;
+    content: " ";
+}
+
+.container:after {
+    clear: both;
+}
+
+.zmdi {
+    display: inline-block;
+    font: normal normal normal 14px/1 'material';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.zmdi-calendar:before {
+    content: '';
+}
+
+.zmdi-calendar:before {
+    content: '';
+}
+
+
+/*! CSS Used from: https://toplearn.com/site/css/public.css?v=7ZzUk_vaUyAiS8nN6JGGaSGlcK8873KHbB0yXdNsMLM */
+
+a:link,
+a:hover {
+    text-decoration: none;
+    outline: 0!important;
+}
+
+a:active {
+    color: #54c3ed;
+}
+
+i,
+span,
+a {
+    display: inline-block;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none!important;
+    list-style-type: none!important;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+i {
+    outline: medium none;
+    text-decoration: none;
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+}
+
+.breadcrumb ul:after {
+    display: block;
+    clear: both;
+    content: '';
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+.breadcrumb {
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+.breadcrumb ul li {
+    display: inline-table;
+    margin-left: 25px;
+    float: right;
+    position: relative;
+}
+
+.breadcrumb ul li:last-child {
+    margin-left: 0;
+}
+
+.breadcrumb ul li:before {
+    position: absolute;
+    left: -15px;
+    top: 7px;
+    font-size: 14px;
+    content: '/';
+    color: #c0c8d1;
+}
+
+.breadcrumb ul li:last-child:before {
+    display: none;
+}
+
+.breadcrumb ul li a {
+    font-size: 13px;
+    line-height: 26px;
+    padding: 2px 0;
+    color: #637076;
+}
+
+.breadcrumb ul li a:hover {
+    color: #2196f3;
+}
+
+.box-shadow {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 7px 0 #eaeff4;
+    -moz-box-shadow: 0 0 7px 0 #eaeff4;
+    -webkit-box-shadow: 0 0 7px 0 #eaeff4;
+    position: relative;
+    border: 1px solid #ecf0f4;
+    background-color: #fff;
+}
+
+
+/*! CSS Used from: https://toplearn.com/Site/css/CustomStyle.css?v=PXJXHDjauN91ZbkLO65N2EtZy_73ZsNjYcbuDnUmZao */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1270px!important;
+    }
+}
+
+
+/*! CSS Used from: https://toplearn.com/Site/css/page.css */
+
+.page-style .main-page-content header ul:after {
+    display: block;
+    clear: both;
+    content: '';
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+.page-style {
+    margin-bottom: 60px;
+}
+
+.page-style .main-page-content header {
+    padding: 18px 0 10px;
+    border-bottom: 1px solid #eff2f5;
+}
+
+.page-style .main-page-content header h1 {
+    position: relative;
+    padding-right: 30px;
+    line-height: 28px;
+    z-index: 2;
+}
+
+.page-style .main-page-content header h1:before {
+    width: 60px;
+    height: 60px;
+    background: url('https://toplearn.com/Site/images/course-bg.svg') no-repeat right bottom;
+    content: '';
+    position: absolute;
+    right: -24px;
+    top: -16px;
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    z-index: 0;
+}
+
+.page-style .main-page-content header h1 a {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #00b3e9;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.page-style .main-page-content header ul {
+    position: absolute;
+    left: 20px;
+    top: 22px;
+}
+
+.page-style .main-page-content header ul li {
+    display: inline-table;
+    float: left;
+    margin-right: 25px;
+}
+
+.page-style .main-page-content header ul li:last-child {
+    margin-right: 0;
+}
+
+.page-style .main-page-content header ul li span {
+    line-height: 20px;
+    font-size: 13px;
+    color: #82959d;
+}
+
+.page-style .main-page-content header ul li span i {
+    font-size: 17px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+    color: #c1d0d7;
+}
+
+.page-style .page-content .inner {
+    padding: 10px 25px;
+    position: relative;
+}
+
+.page-style .page-content .inner p {
+    margin: 8px 0;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: justify;
+    color: #222b30;
+}
+
+.page-style .page-content .inner a {
+    color: #5fb430;
+}
+
+.page-style .page-content .inner a:hover {
+    color: #00b3e9;
+}
+
+.main-page-content .page-content {
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .page-style .main-page-content header ul {
+        position: static;
+        margin-bottom: 10px;
+    }
+    .page-style .main-page-content header ul li:first-child {
+        margin-left: 15px;
+    }
+    .page-style .main-page-content header ul li {
+        float: right;
+    }
+    .page-style .main-page-content header h1:before {
+        display: none;
+    }
+    .page-style .main-page-content header h1 {
+        padding-right: 25px;
+    }
+    .page-style .main-page-content header h1 a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .page-style .page-content .inner {
+        padding: 5px 20px;
+    }
+}
+
+
+/*! CSS Used fontfaces */
+
+@font-face {
+    font-family: material;
+    src: url(https://toplearn.com/Site/css/fonts/Material-icon.woff2?v=2.2.0) format('woff2'), url(https://toplearn.com/Site/css/fonts/Material-icon.woff?v=2.2.0) format('woff'), url(https://toplearn.com/Site/css/fonts/Material-icon.ttf?v=2.2.0) format('truetype');
+}
