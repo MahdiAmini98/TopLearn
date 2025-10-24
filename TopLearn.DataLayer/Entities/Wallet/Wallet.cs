@@ -10,7 +10,7 @@ namespace TopLearn.DataLayer.Entities.Wallet
     {
         public Wallet()
         {
-            
+
         }
         [Key]
         public int WalletId { get; set; }

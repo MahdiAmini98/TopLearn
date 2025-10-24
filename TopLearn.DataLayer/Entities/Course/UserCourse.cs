@@ -11,8 +11,6 @@ namespace TopLearn.DataLayer.Entities.Course
         public int UC_Id { get; set; }
         public int UserId { get; set; }
         public int CourseId { get; set; }
-
-
         public Course Course { get; set; }
         public User.User User { get; set; }
     }

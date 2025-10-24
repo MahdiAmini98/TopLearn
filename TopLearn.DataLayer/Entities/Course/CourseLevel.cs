@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TopLearn.DataLayer.Entities.Course
 {
-   public class CourseLevel
+    public class CourseLevel
     {
         [Key]
         public int LevelId { get; set; }

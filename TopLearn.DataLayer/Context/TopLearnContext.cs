@@ -6,17 +6,18 @@ using Microsoft.EntityFrameworkCore;
 using TopLearn.DataLayer.Entities.Course;
 using TopLearn.DataLayer.Entities.Order;
 using TopLearn.DataLayer.Entities.Permissions;
+using TopLearn.DataLayer.Entities.Question;
 using TopLearn.DataLayer.Entities.User;
 using TopLearn.DataLayer.Entities.Wallet;
 
 namespace TopLearn.DataLayer.Context
 {
-   public class TopLearnContext:DbContext
+    public class TopLearnContext : DbContext
     {
 
-        public TopLearnContext(DbContextOptions<TopLearnContext> options):base(options)
+        public TopLearnContext(DbContextOptions<TopLearnContext> options) : base(options)
         {
-            
+
         }
 
 
@@ -52,6 +53,7 @@ namespace TopLearn.DataLayer.Context
         public DbSet<CourseEpisode> CourseEpisodes { get; set; }
         public DbSet<UserCourse> UserCourses { get; set; }
         public DbSet<CourseComment> CourseComments { get; set; }
+        public DbSet<CourseVote> CourseVotes { get; set; }
 
         #endregion
 
@@ -60,6 +62,13 @@ namespace TopLearn.DataLayer.Context
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+
+        #endregion
+
+        #region Question
+
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Answer> Answers { get; set; }
 
         #endregion
 
@@ -82,7 +91,19 @@ namespace TopLearn.DataLayer.Context
             modelBuilder.Entity<CourseGroup>()
                 .HasQueryFilter(g => !g.IsDelete);
 
-     
+            modelBuilder.Entity<Course>()
+                .HasOne<CourseGroup>(f => f.CourseGroup)
+                .WithMany(g => g.Courses)
+                .HasForeignKey(f => f.GroupId);
+
+            modelBuilder.Entity<Course>()
+                .HasOne<CourseGroup>(f => f.Group)
+                .WithMany(g => g.SubGroup)
+                .HasForeignKey(f => f.SubGroup);
+
+
+            //Seed DataBase
+            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(TopLearnContext).Assembly);
 
             base.OnModelCreating(modelBuilder);
         }

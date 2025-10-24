@@ -66,14 +66,18 @@ namespace TopLearn.DataLayer.Entities.Course
         [ForeignKey("SubGroup")]
         public CourseGroup Group { get; set; }
 
+        [ForeignKey("StatusId")]
         public CourseStatus CourseStatus { get; set; }
 
+        [ForeignKey("LevelId")]
         public CourseLevel CourseLevel { get; set; }
 
         public List<CourseEpisode> CourseEpisodes { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
         public List<UserCourse> UserCourses { get; set; }
         public List<CourseComment> CourseComments { get; set; }
+        public List<CourseVote> CourseVotes { get; set; }
+        public List<Question.Question> Questions { get; set; }
 
         #endregion
     }
