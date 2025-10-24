@@ -25,7 +25,7 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
             return View(_orderService.GetUserOrders(User.Identity.Name));
         }
 
-        public IActionResult ShowOrder(int id,bool finaly=false,string type="")
+        public IActionResult ShowOrder(int id, bool finaly = false, string type = "")
         {
             var order = _orderService.GetOrderForUserPanel(User.Identity.Name, id);
 
@@ -41,7 +41,7 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
 
         public IActionResult FinalyOrder(int id)
         {
-            if (_orderService.FinalyOrder(User.Identity.Name,id))
+            if (_orderService.FinalyOrder(User.Identity.Name, id))
             {
                 return Redirect("/UserPanel/MyOrders/ShowOrder/" + id + "?finaly=true");
             }

@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "نتیجه پرداخت";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .debug-info {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 12px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-card">
+            <div class="debug-info">
+                <strong>Debug Info:</strong><br>
+                WalletId: @ViewBag.WalletId<br>
+                Authority: @ViewBag.Authority<br>
+                Status: @ViewBag.Status
+            </div>
+
+            @if (ViewBag.IsSuccess)
+            {
+                <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #27ae60;"></i>
+                <h2 class="text-success">پرداخت موفق</h2>
+                <p class="lead">@ViewBag.Message</p>
+                <div class="alert alert-success mt-3">
+                    <strong>کد رهگیری:</strong> @ViewBag.Authority<br>
+                    <strong>شماره تراکنش:</strong> @ViewBag.WalletId
+                </div>
+            }
+            else
+            {
+                <i class="bi bi-x-circle-fill" style="font-size: 4rem; color: #e74c3c;"></i>
+                <h2 class="text-danger">پرداخت ناموفق</h2>
+                <p class="lead">@ViewBag.Message</p>
+                <div class="alert alert-danger mt-3">
+                    <strong>کد رهگیری:</strong> @ViewBag.Authority<br>
+                    <strong>شماره تراکنش:</strong> @ViewBag.WalletId
+                </div>
+            }
+
+            <div class="mt-4">
+                <a href="/UserPanel/Wallet" class="btn btn-primary">بازگشت به کیف پول</a>
+                <a href="/" class="btn btn-secondary">بازگشت به خانه</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,29 +1,35 @@
-/**
- * @license Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or http://ckeditor.com/license
- */
-
-CKEDITOR.editorConfig = function (config) {
-    // Define changes to default configuration here. For example:
-    // config.uiColor = '#AADC6E';
-    config.contentsLangDirection = 'rtl';
-    config.language = 'fa';
-    config.filebrowserImageUploadUrl = '/file-upload';
-    config.toolbar = 'MyToolbar';
-
-    config.toolbar_MyToolbar =
-    [
-        { name: 'document', items: ['Source', '-', 'Save', 'NewPage', 'DocProps', 'Preview', 'Print', '-', 'Templates'] },
-        { name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'] },
-        { name: 'editing', items: ['Find', 'Replace', '-', 'SelectAll', '-', 'SpellChecker', 'Scayt'] },
-        { name: 'forms', items: ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'] },
-        { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'] },
-        { name: 'links', items: ['Link', 'Unlink', 'Anchor'] },
-        { name: 'colors', items: ['TextColor', 'BGColor'] },
-        '/',
-        { name: 'insert', items: ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe'] },
-        { name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl'] },
-        { name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize'] }
-
-    ];
+﻿window.ckEditorConfig = {
+    language: 'fa',
+    direction: 'rtl',
+    toolbar: {
+        items: [
+            'undo', 'redo', '|',
+            'heading', '|',
+            'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', '|',
+            'link', '|',
+            'numberedList', 'bulletedList', '|',
+            'outdent', 'indent', '|',
+            'alignment', '|',
+            'insertTable', 'blockQuote', 'imageUpload', 'mediaEmbed', 'horizontalLine', 'specialCharacters', '|',
+            'fontColor', 'fontBackgroundColor', 'fontSize', 'fontFamily'
+        ],
+        shouldNotGroupWhenFull: true
+    },
+    image: {
+        toolbar: [
+            'imageTextAlternative', 'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight'
+        ],
+        upload: {
+            types: ['jpeg', 'png', 'gif', 'bmp', 'webp']
+        }
+    },
+    simpleUpload: {
+        uploadUrl: '/file-upload',
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('input[name="__RequestVerificationToken"]')?.value || ''
+        }
+    },
+    table: {
+        contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells']
+    }
 };

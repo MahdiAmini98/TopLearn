@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Identity.UI.Pages.Account.Internal;
 using Microsoft.AspNetCore.Mvc;
 using TopLearn.Core.Convertors;
 using TopLearn.Core.DTOs;
@@ -28,9 +25,7 @@ namespace TopLearn.Web.Controllers
             _viewRender = viewRender;
         }
 
-        
 
-     
 
         #region Register
 
@@ -49,10 +44,10 @@ namespace TopLearn.Web.Controllers
                 return View(register);
             }
 
-            
+
             if (_userService.IsExistUserName(register.UserName))
             {
-                ModelState.AddModelError("UserName","نام کاربری معتبر نمی باشد");
+                ModelState.AddModelError("UserName", "نام کاربری معتبر نمی باشد");
                 return View(register);
             }
 
@@ -63,7 +58,7 @@ namespace TopLearn.Web.Controllers
             }
 
 
-            DataLayer.Entities.User.User user=new User()
+            DataLayer.Entities.User.User user = new User()
             {
                 ActiveCode = NameGenerator.GenerateUniqCode(),
                 Email = FixedText.FixEmail(register.Email),
@@ -78,11 +73,11 @@ namespace TopLearn.Web.Controllers
             #region Send Activation Email
 
             string body = _viewRender.RenderToStringAsync("_ActiveEmail", user);
-            SendEmail.Send(user.Email,"فعالسازی",body);
+            SendEmail.Send(user.Email, "فعالسازی", body);
 
             #endregion
 
-            return View("SuccessRegister",user);
+            return View("SuccessRegister", user);
         }
 
 
@@ -90,7 +85,7 @@ namespace TopLearn.Web.Controllers
 
         #region Login
         [Route("Login")]
-        public ActionResult Login(bool EditProfile=false)
+        public ActionResult Login(bool EditProfile = false)
         {
             ViewBag.EditProfile = EditProfile;
             return View();
@@ -98,7 +93,7 @@ namespace TopLearn.Web.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public ActionResult Login(LoginViewModel login,string ReturnUrl="/")
+        public ActionResult Login(LoginViewModel login, string ReturnUrl = "/")
         {
             if (!ModelState.IsValid)
             {
@@ -106,17 +101,17 @@ namespace TopLearn.Web.Controllers
             }
 
             var user = _userService.LoginUser(login);
-            if (user!=null)
+            if (user != null)
             {
                 if (user.IsActive)
                 {
-                    var claims=new List<Claim>()
+                    var claims = new List<Claim>()
                     {
                         new Claim(ClaimTypes.NameIdentifier,user.UserId.ToString()),
                         new Claim(ClaimTypes.Name,user.UserName)
                     };
-                    var identity=new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-                    var principal= new ClaimsPrincipal(identity);
+                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var principal = new ClaimsPrincipal(identity);
 
                     var properties = new AuthenticationProperties
                     {
@@ -136,7 +131,7 @@ namespace TopLearn.Web.Controllers
                     ModelState.AddModelError("Email", "حساب کاربری شما فعال نمی باشد");
                 }
             }
-            ModelState.AddModelError("Email","کاربری با مشخصات وارد شده یافت نشد");
+            ModelState.AddModelError("Email", "کاربری با مشخصات وارد شده یافت نشد");
             return View(login);
         }
 
@@ -187,7 +182,7 @@ namespace TopLearn.Web.Controllers
             }
 
             string bodyEmail = _viewRender.RenderToStringAsync("_ForgotPassword", user);
-            SendEmail.Send(user.Email,"بازیابی حساب کاربری",bodyEmail);
+            SendEmail.Send(user.Email, "بازیابی حساب کاربری", bodyEmail);
             ViewBag.IsSuccess = true;
 
             return View();

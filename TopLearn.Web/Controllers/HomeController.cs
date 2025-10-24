@@ -26,12 +26,13 @@ namespace TopLearn.Web.Controllers
 
         public IActionResult Index()
         {
+
             var popular = _courseService.GetPopularCourse();
             ViewBag.PopularCourse = popular;
             return View(_courseService.GetCourse().Item1);
         }
 
-     
+
 
         [Route("OnlinePayment/{id}")]
         public IActionResult onlinePayment(int id)
@@ -61,7 +62,7 @@ namespace TopLearn.Web.Controllers
 
         public IActionResult GetSubGroups(int id)
         {
-            List<SelectListItem> list=new List<SelectListItem>()
+            List<SelectListItem> list = new List<SelectListItem>()
             {
                 new SelectListItem(){Text = "انتخاب کنید",Value = ""}
             };
@@ -70,46 +71,52 @@ namespace TopLearn.Web.Controllers
         }
 
 
-        [HttpPost]
-        [Route("file-upload")]
-        public IActionResult UploadImage(IFormFile upload, string CKEditorFuncNum, string CKEditor, string langCode)
+        //[HttpPost]
+        //[Route("file-upload")]
+        //public IActionResult UploadImage(IFormFile upload, string CKEditorFuncNum, string CKEditor, string langCode)
+        //{
+        //    if (upload.Length <= 0) return null;
+
+        //    var fileName = Guid.NewGuid() + Path.GetExtension(upload.FileName).ToLower();
+
+
+
+        //    var path = Path.Combine(
+        //        Directory.GetCurrentDirectory(), "wwwroot/MyImages",
+        //        fileName);
+
+        //    using (var stream = new FileStream(path, FileMode.Create))
+        //    {
+        //        upload.CopyTo(stream);
+
+        //    }
+
+
+
+        //    var url = $"{"/MyImages/"}{fileName}";
+
+
+        //    return Json(new { uploaded = true, url });
+        //}
+
+
+        [HttpPost("file-upload")]
+        public async Task<IActionResult> UploadImage(IFormFile upload)
         {
-            if (upload.Length <= 0) return null;
+            if (upload == null || upload.Length == 0)
+                return BadRequest(new { uploaded = false });
 
             var fileName = Guid.NewGuid() + Path.GetExtension(upload.FileName).ToLower();
+            var savePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MyImages", fileName);
 
+            using (var stream = new FileStream(savePath, FileMode.Create))
+                await upload.CopyToAsync(stream);
 
-
-            var path = Path.Combine(
-                Directory.GetCurrentDirectory(), "wwwroot/MyImages",
-                fileName);
-
-            using (var stream = new FileStream(path, FileMode.Create))
-            {
-                upload.CopyTo(stream);
-
-            }
-
-
-
-            var url = $"{"/MyImages/"}{fileName}";
-
-
+            var url = $"/MyImages/{fileName}";
             return Json(new { uploaded = true, url });
         }
-        [Route("AboutUs")]
-        public IActionResult AboutUs()
-        {
-            return View();
-        }
 
-        [Route("contact")]
-        public IActionResult contact()
-        {
-            return View();
-        }
-        [Route("Work")]
-        public IActionResult Work()
+        public IActionResult Error404()
         {
             return View();
         }

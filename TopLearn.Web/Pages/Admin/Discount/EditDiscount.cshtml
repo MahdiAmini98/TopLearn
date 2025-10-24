@@ -15,7 +15,7 @@
 <div class="row">
     <form method="post" enctype="multipart/form-data">
 
-        <input type="hidden" asp-for="Discount.DiscountId"/>
+        <input type="hidden" asp-for="Discount.DiscountId" />
 
         <div class="form-group">
             <label>کد تخفیف </label>
@@ -31,11 +31,11 @@
         </div>
         <div class="form-group">
             <label>تاریخ شروع </label>
-            <input  id="stDate" name="stDate" value="@((Model.Discount.StartDate!=null)?Model.Discount.StartDate.Value.ToShamsi():"")"/>
+            <input id="stDate" name="stDate" value="@((Model.Discount.StartDate != null) ? Model.Discount.StartDate.Value.ToShamsi() : "")" />
         </div>
         <div class="form-group">
             <label>تاریخ پایان </label>
-            <input  id="edDate" name="edDate" value="@((Model.Discount.EndDate!=null)?Model.Discount.EndDate.Value.ToShamsi():"")"/>
+            <input id="edDate" name="edDate" value="@((Model.Discount.EndDate != null) ? Model.Discount.EndDate.Value.ToShamsi() : "")" />
         </div>
         <input type="submit" value="ذخیره اطلاعات" class="btn btn-success" />
 

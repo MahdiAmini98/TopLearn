@@ -9,7 +9,7 @@ using TopLearn.Core.Services.Interfaces;
 
 namespace TopLearn.Web.Pages.Admin.Discount
 {
-    [PermissionChecker(14)]
+    [PermissionChecker(-5)]
 
     public class IndexModel : PageModel
     {

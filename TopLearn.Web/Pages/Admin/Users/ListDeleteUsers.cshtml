@@ -87,7 +87,7 @@
 
                                         @for (int i = 1; i <= Model.UserForAdminViewModel.PageCount; i++)
                                         {
-                                            <li class="paginate_button @((i==Model.UserForAdminViewModel.CurrentPage)?"active":"")" aria-controls="dataTables-example" tabindex="0">
+                                            <li class="paginate_button @((i == Model.UserForAdminViewModel.CurrentPage) ? "active" : "")" aria-controls="dataTables-example" tabindex="0">
                                                 <a href="/Admin/Users?PageId=@i">@i</a>
                                             </li>
                                         }

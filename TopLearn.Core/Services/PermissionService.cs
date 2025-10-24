@@ -97,10 +97,10 @@ namespace TopLearn.Core.Services
 
         public void UpdatePermissionsRole(int roleId, List<int> permissions)
         {
-            _context.RolePermission.Where(p=>p.RoleId==roleId)
-                .ToList().ForEach(p=> _context.RolePermission.Remove(p));
+            _context.RolePermission.Where(p => p.RoleId == roleId)
+                .ToList().ForEach(p => _context.RolePermission.Remove(p));
 
-            AddPermissionsToRole(roleId,permissions);
+            AddPermissionsToRole(roleId, permissions);
         }
 
         public bool CheckPermission(int permissionId, string userName)
@@ -115,7 +115,7 @@ namespace TopLearn.Core.Services
 
             List<int> RolesPermission = _context.RolePermission
                 .Where(p => p.PermissionId == permissionId)
-                .Select(p=>p.RoleId).ToList();
+                .Select(p => p.RoleId).ToList();
 
             return RolesPermission.Any(p => UserRoles.Contains(p));
 

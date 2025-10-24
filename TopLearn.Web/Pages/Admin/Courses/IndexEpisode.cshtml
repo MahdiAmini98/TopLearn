@@ -37,34 +37,34 @@
                     <tbody>
                         @foreach (var item in Model.CourseEpisodes)
                         {
-                        <tr>
-                            <td>
-                                @item.EpisodeTitle
-                            </td>
-                            <td>
-                                @item.EpisodeTime
-                            </td>
-                            <td>
-                                @if (item.IsFree)
-                                {
-                                    <span class="text-success">
-                                        <i class="glyphicon glyphicon-ok"></i>
-                                    </span>
-                                }
-                                else
-                                {
-                                    <span class="text-danger">
-                                        <i class="glyphicon glyphicon-remove"></i>
-                                    </span> 
-                                }
-                            </td>
-                            <td>
-                                <a href="/Admin/Courses/EditEpisode/@item.EpisodeId" class="btn btn-warning btn-sm">
-                                    ویرایش
-                                </a>
+                            <tr>
+                                <td>
+                                    @item.EpisodeTitle
+                                </td>
+                                <td>
+                                    @item.EpisodeTime
+                                </td>
+                                <td>
+                                    @if (item.IsFree)
+                                    {
+                                        <span class="text-success">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                        </span>
+                                    }
+                                </td>
+                                <td>
+                                    <a href="/Admin/Courses/EditEpisode/@item.EpisodeId" class="btn btn-warning btn-sm">
+                                        ویرایش
+                                    </a>
 
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
                         }
                     </tbody>
                 </table>

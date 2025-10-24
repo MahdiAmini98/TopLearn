@@ -10,7 +10,7 @@ using TopLearn.Core.Services.Interfaces;
 
 namespace TopLearn.Web.Pages.Admin.Discount
 {
-    [PermissionChecker(15)]
+    [PermissionChecker(-51)]
 
     public class CreateDiscountModel : PageModel
     {

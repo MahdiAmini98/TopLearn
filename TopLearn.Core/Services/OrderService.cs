@@ -65,7 +65,7 @@ namespace TopLearn.Core.Services
                 }
                 else
                 {
-                    detail=new OrderDetail()
+                    detail = new OrderDetail()
                     {
                         OrderId = order.OrderId,
                         Count = 1,
@@ -74,12 +74,12 @@ namespace TopLearn.Core.Services
                     };
                     _context.OrderDetails.Add(detail);
                 }
-               
+
                 _context.SaveChanges();
                 UpdatePriceOrder(order.OrderId);
             }
-           
-            
+
+
             return order.OrderId;
 
         }
@@ -96,7 +96,7 @@ namespace TopLearn.Core.Services
         {
             int userId = _userService.GetUserIdByUserName(userName);
 
-            return _context.Orders.Include(o => o.OrderDetails).ThenInclude(od=>od.Course)
+            return _context.Orders.Include(o => o.OrderDetails).ThenInclude(od => od.Course)
                 .FirstOrDefault(o => o.UserId == userId && o.OrderId == orderId);
         }
 
@@ -173,10 +173,10 @@ namespace TopLearn.Core.Services
             if (discount == null)
                 return DiscountUseType.NotFound;
 
-            if (discount.StartDate != null && discount.StartDate > DateTime.Now)
+            if (discount.StartDate != null && discount.StartDate < DateTime.Now)
                 return DiscountUseType.ExpierDate;
 
-            if (discount.EndDate != null && discount.EndDate <= DateTime.Now)
+            if (discount.EndDate != null && discount.EndDate >= DateTime.Now)
                 return DiscountUseType.ExpierDate;
 
 
@@ -189,8 +189,8 @@ namespace TopLearn.Core.Services
                 return DiscountUseType.UserUsed;
 
             int percent = (order.OrderSum * discount.DiscountPercent) / 100;
-            order.OrderSum = order.OrderSum - percent ;
-            
+            order.OrderSum = order.OrderSum - percent;
+
             UpdateOrder(order);
 
             if (discount.UsableCount != null)
@@ -205,7 +205,7 @@ namespace TopLearn.Core.Services
                 DiscountId = discount.DiscountId
             });
             _context.SaveChanges();
-           
+
 
 
             return DiscountUseType.Success;

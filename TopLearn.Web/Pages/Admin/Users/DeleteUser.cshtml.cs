@@ -10,9 +10,8 @@ using TopLearn.Core.Services.Interfaces;
 
 namespace TopLearn.Web.Pages.Admin.Users
 {
-    [PermissionChecker(5)]
 
-    [PermissionChecker(5)]
+    [PermissionChecker(-23)]
     public class DeleteUserModel : PageModel
     {
         private IUserService _userService;

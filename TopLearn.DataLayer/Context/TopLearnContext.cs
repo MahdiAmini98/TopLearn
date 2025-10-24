@@ -103,7 +103,7 @@ namespace TopLearn.DataLayer.Context
 
 
             //Seed DataBase
-            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(TopLearnContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(TopLearnContext).Assembly);
 
             base.OnModelCreating(modelBuilder);
         }

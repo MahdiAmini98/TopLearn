@@ -10,7 +10,7 @@ using TopLearn.Core.Services.Interfaces;
 
 namespace TopLearn.Web.Pages.Admin.Courses
 {
-    [PermissionChecker(10)]
+    [PermissionChecker(-4)]
     public class IndexModel : PageModel
     {
         private ICourseService _courseService;

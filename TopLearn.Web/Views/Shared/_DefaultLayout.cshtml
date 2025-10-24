@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title> تاپ لرن | @ViewData["Title"] </title>
-    @RenderSection("MetaTag",false)
+    @RenderSection("MetaTag", false)
     <partial name="_MetaTags" />
     <partial name="_Styles" />
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
     <script src="/js/jquery.min.js"></script>
 </head>
 <body>
@@ -21,28 +22,29 @@
                                 <a href="/work"> همکاری در فروش </a>
                                 <a href="/aboutus"> درباره ما </a>
                                 <a href="/contact"> تماس با ما </a>
+                                <a href="/Forum"> انجمن </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-xs-12">
                         <div class="clientarea">
-                          @if (User.Identity.IsAuthenticated)
-                          {
-                              <div class="loggein">
-                                  <i class="zmdi zmdi-account"></i><a href="/UserPanel"> @User.Identity.Name ، خوش آمدید </a>
-                                  /
-                                  <a href="/Logout"> خروج </a>
-                                  </div>
-                          }
-                          else
-                          {
-                              <div class="signin">
-                                  <i class="zmdi zmdi-account"></i>
-                                  <a href="/Login"> ورود </a> /
-                                  <a href="/Register"> عضویت </a>
-                              </div> 
-                          }
-                      
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <div class="loggein">
+                                    <i class="zmdi zmdi-account"></i><a href="/UserPanel"> @User.Identity.Name ، خوش آمدید </a>
+                                    /
+                                    <a href="/Logout"> خروج </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="signin">
+                                    <i class="zmdi zmdi-account"></i>
+                                    <a href="/Login"> ورود </a> /
+                                    <a href="/Register"> عضویت </a>
+                                </div>
+                            }
+
                         </div>
                     </div>
                 </div>
@@ -52,8 +54,8 @@
     </div>
 
     <!-- main manu -->
-@await Component.InvokeAsync("CourseGroupComponent")
-<!-- /main manu -->
+    @await Component.InvokeAsync("CourseGroupComponent")
+    <!-- /main manu -->
     <!-- content -->
     @RenderBody()
     <!-- /content -->
@@ -64,8 +66,12 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
-<script src="/js/jquery.validate.unobtrusive.js"></script>
-@RenderSection("Scripts",false)
+    <script src="/js/jquery.validate.unobtrusive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    @RenderSection("Scripts", false)
 
 </body>
 </html>

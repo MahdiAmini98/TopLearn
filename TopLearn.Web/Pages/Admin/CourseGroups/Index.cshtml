@@ -35,7 +35,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var group in Model.CourseGroups.Where(g=>g.ParentId==null))
+                                @foreach (var group in Model.CourseGroups.Where(g => g.ParentId == null))
                                 {
                                     <tr>
                                         <td>@group.GroupTitle</td>

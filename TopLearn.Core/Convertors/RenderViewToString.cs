@@ -33,7 +33,7 @@ namespace TopLearn.Core.Convertors
             _serviceProvider = serviceProvider;
         }
 
-        public  string RenderToStringAsync(string viewName, object model)
+        public string RenderToStringAsync(string viewName, object model)
         {
             var httpContext = new DefaultHttpContext { RequestServices = _serviceProvider };
             var actionContext = new ActionContext(httpContext, new RouteData(), new ActionDescriptor());
@@ -61,7 +61,7 @@ namespace TopLearn.Core.Convertors
                     new HtmlHelperOptions()
                 );
 
-                 viewResult.View.RenderAsync(viewContext);
+                viewResult.View.RenderAsync(viewContext);
                 return sw.ToString();
             }
         }

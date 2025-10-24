@@ -2,8 +2,8 @@
 @using TopLearn.DataLayer.Entities.User
 @model TopLearn.Web.Pages.Admin.Users.EditUserModel
 @{
-    ViewData["Title"] = " کاربر";
-    ICollection<Role> Roles = ViewData["Roles"] as List<Role>;
+    ViewData["Title"] = "افزودن کاربر";
+    List<Role> Roles = ViewData["Roles"] as List<Role>;
 }
 
 <div class="row">
@@ -15,8 +15,8 @@
 
 <div class="row">
     <form method="post" enctype="multipart/form-data">
-        <input type="hidden" asp-for="EditUserViewModel.UserId"/>
-        <input type="hidden" asp-for="EditUserViewModel.AvatarName"/>
+        <input type="hidden" asp-for="EditUserViewModel.UserId" />
+        <input type="hidden" asp-for="EditUserViewModel.AvatarName" />
         <div class="col-md-8">
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -49,7 +49,7 @@
                         }
 
                     </div>
-                    <input type="submit" value="ویرایش اطلاعات" class="btn btn-success"/>
+                    <input type="submit" value="ویرایش اطلاعات" class="btn btn-success" />
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -61,7 +61,7 @@
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
-                    <img id="imgAvatar" class="thumbnail" src="/UserAvatar/@Model.EditUserViewModel.AvatarName"/>
+                    <img id="imgAvatar" class="thumbnail" src="/UserAvatar/@Model.EditUserViewModel.AvatarName" />
                     <div class="form-group">
                         <label>انتخاب تصویر</label>
                         <input type="file" asp-for="EditUserViewModel.UserAvatar">
@@ -76,7 +76,7 @@
 </div>
 
 @section Scripts
-    {
+{
     <script>
         function readURL(input) {
 

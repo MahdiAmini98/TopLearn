@@ -41,7 +41,7 @@
             </div>
             <!-- /.navbar-header -->
 
-          
+
 
             <div class="navbar-default navbar-static-side" role="navigation">
                 <div class="sidebar-collapse">
@@ -61,20 +61,14 @@
                             <a href="/Admin"><i class="fa fa-dashboard fa-fw"></i> پنل ادمین</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> مدیریت نقش ها<span class="fa zmdi-roller"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> مدیریت کاربران<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                              
+                                @if (_PermissionService.CheckPermission(1002, User.Identity.Name))
+                                {
                                     <li>
                                         <a href="/admin/roles">دسترسی ها</a>
                                     </li>
-                            
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> مدیریت کاربران<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                              
+                                }
                                 <li>
                                     <a href="/admin/users">کاربران</a>
                                 </li>
@@ -109,7 +103,7 @@
         </nav>
 
         <div id="page-wrapper">
-          @RenderBody()
+            @RenderBody()
         </div>
         <!-- /#page-wrapper -->
 
@@ -129,7 +123,7 @@
 
     <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
     <script src="/AdminContent/js/demo/dashboard-demo.js"></script>
-    @RenderSection("Scripts",false)
+    @RenderSection("Scripts", false)
 </body>
 
 </html>

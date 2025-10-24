@@ -10,7 +10,7 @@ using TopLearn.DataLayer.Entities.User;
 
 namespace TopLearn.Web.Pages.Admin.Roles
 {
-    [PermissionChecker(8)]
+    [PermissionChecker(-32)]
     public class EditRoleModel : PageModel
     {
         private IPermissionService _permissionService;

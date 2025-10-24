@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TopLearn.DataLayer.Entities.Course;
 
 namespace TopLearn.Core.DTOs.Course
 {
@@ -10,6 +11,6 @@ namespace TopLearn.Core.DTOs.Course
         public string Title { get; set; }
         public string ImageName { get; set; }
         public int Price { get; set; }
-        public TimeSpan TotalTime { get; set; }
+        public List<CourseEpisode> CourseEpisodes { get; set; }
     }
 }

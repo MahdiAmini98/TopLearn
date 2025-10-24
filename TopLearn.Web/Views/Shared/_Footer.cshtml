@@ -1,4 +1,7 @@
-﻿<footer>
+﻿@using Microsoft.Extensions.Configuration;
+@inject IConfiguration Configuration
+
+<footer>
     <div class="top-footer">
         <div class="container">
             <div class="row">
@@ -6,12 +9,12 @@
                     <section class="list">
                         <header><h4> دسته بندی ها</h4></header>
                         <ul>
-                            <li><a href="https://localhost:44349/Course?selectedGroups=1">برنامه نویسی موبایل</a></li>
-                            <li><a href="https://localhost:44349/Course?selectedGroups=3">برنامه نویسی وب </a></li>
-                            <li><a href="https://localhost:44349/Course?selectedGroups=4">برنامه نویسی تحت ویندوز </a></li>
-                            <li><a href="https://localhost:44349/Course?selectedGroups=5">طراحی سایت  </a></li>
-                            <li><a href="https://localhost:44349/Course?selectedGroups=6">بانک های اطلاعاتی </a></li>
-                            <li><a href="https://localhost:44349/Course?selectedGroups=8">سیستم عامل</a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Course?selectedGroups=1">برنامه نویسی موبایل</a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Course?selectedGroups=3">برنامه نویسی وب </a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Course?selectedGroups=4">برنامه نویسی تحت ویندوز </a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Course?selectedGroups=5">طراحی سایت  </a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Course?selectedGroups=6">بانک های اطلاعاتی </a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Course?selectedGroups=8">سیستم عامل</a></li>
                         </ul>
                     </section>
                 </div>
@@ -32,12 +35,12 @@
                     <section class="list">
                         <header><h4> دسترسی سریع</h4></header>
                         <ul>
-                            <li><a href="https://localhost:44349/Register">عضویت در سایت</a></li>
-                            <li><a href="https://localhost:44349/Login">ورود به پنل کاربری </a></li>
-                            <li><a href="https://localhost:44349/aboutus">درباره ما </a></li>
-                            <li><a href="https://localhost:44349/contact">تماس با ما </a></li>
-                            <li><a href="https://localhost:44349/work">همکاری با تاپ لرن </a></li>
-                            <li><a href="https://localhost:44349/Course?filter=">مشاهده همه دوره ها</a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Register">عضویت در سایت</a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Login">ورود به پنل کاربری </a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/aboutus">درباره ما </a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/contact">تماس با ما </a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/work">همکاری با تاپ لرن </a></li>
+                            <li><a href="@Configuration["ApplicationUrlConfiguration:BaseUrl"]/Course?filter=">مشاهده همه دوره ها</a></li>
                         </ul>
                     </section>
                 </div>
@@ -46,11 +49,11 @@
                         <header><h4> شبکه های اجتماعی</h4></header>
                         <ul>
                             <li><a href="#"> <i class="zmdi zmdi-instagram" style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
-                            <li><a href="#"><i class="zmdi zmdi-google-plus"  style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
-                            <li><a href="#"><i class="zmdi zmdi-facebook"  style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
-                            <li><a href="#"><i class="zmdi zmdi-linkedin"  style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
-                            <li><a href="#"><i class="zmdi zmdi-twitter"  style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
-                            <li><a href="#"><i class="zmdi zmdi-github"  style="font-size: 2rem; transition: all 1s ease-in-out;"></i></a></li>
+                            <li><a href="#"><i class="zmdi zmdi-google-plus" style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
+                            <li><a href="#"><i class="zmdi zmdi-facebook" style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
+                            <li><a href="#"><i class="zmdi zmdi-linkedin" style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
+                            <li><a href="#"><i class="zmdi zmdi-twitter" style="font-size: 2rem; transition: all 1s ease-in-out;"></i> </a></li>
+                            <li><a href="#"><i class="zmdi zmdi-github" style="font-size: 2rem; transition: all 1s ease-in-out;"></i></a></li>
                         </ul>
                     </section>
                 </div>

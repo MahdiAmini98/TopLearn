@@ -88,6 +88,200 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("TeacherId");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new
+                        {
+                            CourseId = -1,
+                            CourseDescription = "در این دوره جامع، شما با فریمورک قدرتمند ASP.NET Core 9 آشنا خواهید شد. از مباحث پایه مانند Routing و Middleware تا مباحث پیشرفته مانند CQRS Pattern، Clean Architecture و Microservices.\r\n                     مباحث اصلی دوره :   \r\n                    - اصول پایه ASP.NET Core 9\r\n                    - معماری MVC و Web API\r\n                    - Entity Framework Core 9\r\n                    - Identity و سیستم احراز هویت\r\n                    - SignalR برای برنامه‌های Real-time\r\n                    - تست نویسی (Unit Test & Integration Test)\r\n                    - DevOps\r\n\r\nاین دوره مناسب توسعه‌دهندگان .NET است که می‌خواهند به صورت حرفه‌ای با ASP.NET Core کار کنند.",
+                            CourseImageName = "24af9d08a5fe440a8d49840afa9ed208.jpg",
+                            CoursePrice = 850000,
+                            CourseTitle = "آموزش کامل ASP.NET Core 9 - از صفر تا صد",
+                            CreateDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "aspnet-core-demo.mp4",
+                            GroupId = -2,
+                            LevelId = -2,
+                            StatusId = -2,
+                            SubGroup = -201,
+                            Tags = "ASP.NET Core,Web Development,C#,MVC,Web API,Entity Framework",
+                            TeacherId = -2
+                        },
+                        new
+                        {
+                            CourseId = -2,
+                            CourseDescription = "در این دوره پیشرفته، شما یاد خواهید گرفت چگونه APIهای RESTful حرفه‌ای با ASP.NET Core بسازید.\r\n\r\nسرفصل‌های دوره:\r\n- طراحی RESTful API\r\n- Versioning در Web API\r\n- Documentation با Swagger/OpenAPI\r\n- Caching و Performance Optimization\r\n- Security (JWT, OAuth2)\r\n- Rate Limiting\r\n- Background Services\r\n- Integration Testing",
+                            CourseImageName = "2030ac10cf1e4679b8d0e0c9d7751fe1.jpg",
+                            CoursePrice = 650000,
+                            CourseTitle = "آموزش پیشرفته Web API در ASP.NET Core",
+                            CreateDate = new DateTime(2019, 12, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "web-api-demo.mp4",
+                            GroupId = -2,
+                            LevelId = -3,
+                            StatusId = -2,
+                            SubGroup = -201,
+                            Tags = "ASP.NET Core,Web API,RESTful,JWT,Swagger,Performance",
+                            TeacherId = -3
+                        },
+                        new
+                        {
+                            CourseId = -3,
+                            CourseDescription = "یادگیری React.js به همراه پروژه‌های عملی و واقعی. از مفاهیم پایه تا hooks پیشرفته.\r\n\r\nمباحث covered:\r\n- Components و JSX\r\n- State و Props\r\n- Hooks (useState, useEffect, useContext)\r\n- Routing با React Router\r\n- State Management با Context API و Redux\r\n- Testing با Jest\r\n- Deployment",
+                            CourseImageName = "2db60db10ed347b590d08719ce6f5668.jpg",
+                            CoursePrice = 550000,
+                            CourseTitle = "آموزش React.js - توسعه رابط کاربری مدرن",
+                            CreateDate = new DateTime(2019, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "react-demo.mp4",
+                            GroupId = -2,
+                            LevelId = -2,
+                            StatusId = -2,
+                            SubGroup = -207,
+                            Tags = "React.js,JavaScript,Frontend,Hooks,Redux",
+                            TeacherId = -4
+                        },
+                        new
+                        {
+                            CourseId = -4,
+                            CourseDescription = "TypeScript زبان برنامه‌نویسی مدرن که توسعه JavaScript را متحول کرده است.\r\n\r\nسرفصل‌ها:\r\n- Types و Interfaces\r\n- Generics\r\n- Decorators\r\n- Integration با React و Angular\r\n- Advanced Types\r\n- Project Configuration",
+                            CourseImageName = "e06bfeed4f8d40e99a1804bd0fae60d7.jpg",
+                            CoursePrice = 450000,
+                            CourseTitle = "آموزش TypeScript برای توسعه‌دهندگان JavaScript",
+                            CreateDate = new DateTime(2019, 12, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "typescript-demo.mp4",
+                            GroupId = -2,
+                            LevelId = -2,
+                            StatusId = -1,
+                            SubGroup = -207,
+                            Tags = "TypeScript,JavaScript,Frontend,Programming",
+                            TeacherId = -2
+                        },
+                        new
+                        {
+                            CourseId = -5,
+                            CourseDescription = "توسعه اپلیکیشن‌های مدرن Android با Kotlin و Android Jetpack.\r\n\r\nمباحث اصلی:\r\n- Kotlin Fundamentals\r\n- Android Jetpack Components\r\n- Room Database\r\n- WorkManager\r\n- Navigation Component\r\n- Testing",
+                            CourseImageName = "38b32431b36d4833b65eeefaa9e50f21.jpg",
+                            CoursePrice = 750000,
+                            CourseTitle = "آموزش توسعه اپلیکیشن Android با Kotlin",
+                            CreateDate = new DateTime(2019, 11, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "android-demo.mp4",
+                            GroupId = -1,
+                            LevelId = -2,
+                            StatusId = -2,
+                            SubGroup = -101,
+                            Tags = "Android,Kotlin,Mobile Development,Jetpack",
+                            TeacherId = -2
+                        },
+                        new
+                        {
+                            CourseId = -6,
+                            CourseDescription = "یادگیری توسعه اپلیکیشن‌های موبایل برای iOS و Android با React Native.\r\n\r\nسرفصل‌ها:\r\n- React Native Fundamentals\r\n- Navigation\r\n- State Management\r\n- Native Modules\r\n- Performance Optimization\r\n- Publishing to Stores",
+                            CourseImageName = "9ec1c01ac39548aebfc4dce97c08bb74.jpg",
+                            CoursePrice = 680000,
+                            CourseTitle = "توسعه اپلیکیشن‌های Cross-Platform با React Native",
+                            CreateDate = new DateTime(2019, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "react-native-demo.mp4",
+                            GroupId = -1,
+                            LevelId = -3,
+                            StatusId = -2,
+                            SubGroup = -103,
+                            Tags = "React Native,Mobile,Cross-Platform,JavaScript",
+                            TeacherId = -3
+                        },
+                        new
+                        {
+                            CourseId = -7,
+                            CourseDescription = "مهارت‌های ضروری برای کار با SQL Server و نوشتن Queryهای بهینه.\r\n\r\nمباحث covered:\r\n- Database Design\r\n- T-SQL Programming\r\n- Stored Procedures و Functions\r\n- Indexing و Performance Tuning\r\n- Security و Permissions\r\n- Backup و Recovery",
+                            CourseImageName = "dc8910af08ab41e0b69a1ef9e5b6b5c4.jpg",
+                            CoursePrice = 480000,
+                            CourseTitle = "آموزش جامع SQL Server و T-SQL",
+                            CreateDate = new DateTime(2019, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "sql-server-demo.mp4",
+                            GroupId = -5,
+                            LevelId = -2,
+                            StatusId = -2,
+                            SubGroup = -501,
+                            Tags = "SQL Server,Database,T-SQL,SQL,Performance",
+                            TeacherId = -4
+                        },
+                        new
+                        {
+                            CourseId = -8,
+                            CourseDescription = "یادگیری کار با MongoDB برای برنامه‌های مدرن.\r\n\r\nسرفصل‌ها:\r\n- MongoDB Fundamentals\r\n- CRUD Operations\r\n- Aggregation Framework\r\n- Indexing\r\n- Replication و Sharding\r\n- Integration با .NET",
+                            CourseImageName = "7c394f471bae4a52a6fc1f66bd8e9da1.jpg",
+                            CoursePrice = 520000,
+                            CourseTitle = "آموزش MongoDB - پایگاه داده NoSQL",
+                            CreateDate = new DateTime(2019, 12, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "mongodb-demo.mp4",
+                            GroupId = -5,
+                            LevelId = -3,
+                            StatusId = -1,
+                            SubGroup = -505,
+                            Tags = "MongoDB,NoSQL,Database,Aggregation",
+                            TeacherId = -2
+                        },
+                        new
+                        {
+                            CourseId = -9,
+                            CourseDescription = "مدیریت برنامه‌ها با Docker و Kubernetes.\r\n\r\nمباحث اصلی:\r\n- Docker Fundamentals\r\n- Docker Compose\r\n- Container Orchestration\r\n- CI/CD Pipelines\r\n- Monitoring و Logging",
+                            CourseImageName = "8a29ceb69d0d445fa5a84a23f8289fc1.jpg",
+                            CoursePrice = 600000,
+                            CourseTitle = "آموزش Docker و Containerization",
+                            CreateDate = new DateTime(2019, 12, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "docker-demo.mp4",
+                            GroupId = -7,
+                            LevelId = -3,
+                            StatusId = -2,
+                            SubGroup = -705,
+                            Tags = "Docker,Container,DevOps,Kubernetes,CI/CD",
+                            TeacherId = -2
+                        },
+                        new
+                        {
+                            CourseId = -10,
+                            CourseDescription = "یادگیری اصول طراحی رابط کاربری و تجربه کاربری با Figma.\r\n\r\nسرفصل‌ها:\r\n- Design Principles\r\n- User Research\r\n- Wireframing\r\n- Prototyping\r\n- Design Systems\r\n- Collaboration در Figma",
+                            CourseImageName = "cc2e5dd085224351a743992ed58d6f5f.jpg",
+                            CoursePrice = 380000,
+                            CourseTitle = "آموزش طراحی UI/UX با Figma",
+                            CreateDate = new DateTime(2019, 11, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "figma-demo.mp4",
+                            GroupId = -4,
+                            LevelId = -1,
+                            StatusId = -2,
+                            SubGroup = -407,
+                            Tags = "UI/UX,Figma,Design,User Research",
+                            TeacherId = -2
+                        },
+                        new
+                        {
+                            CourseId = -11,
+                            CourseDescription = "دوره رایگان برای شروع یادگیری طراحی وب با HTML و CSS.\r\n\r\nمباحث covered:\r\n- HTML5 Semantics\r\n- CSS3 Fundamentals\r\n- Flexbox و Grid\r\n- Responsive Design\r\n- CSS Animations",
+                            CourseImageName = "df04d23e71d5483fb0b33bb8ca3e0036.jpg",
+                            CoursePrice = 0,
+                            CourseTitle = "آموزش رایگان HTML و CSS - مقدماتی",
+                            CreateDate = new DateTime(2019, 11, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "html-css-demo.mp4",
+                            GroupId = -4,
+                            LevelId = -1,
+                            StatusId = -2,
+                            SubGroup = -401,
+                            Tags = "HTML,CSS,Frontend,Free Course",
+                            TeacherId = -3
+                        },
+                        new
+                        {
+                            CourseId = -12,
+                            CourseDescription = "یادگیری اصول برنامه‌نویسی با JavaScript.\r\n\r\nسرفصل‌ها:\r\n- Variables و Data Types\r\n- Functions\r\n- DOM Manipulation\r\n- Events\r\n- ES6+ Features",
+                            CourseImageName = "cbfb83419c7f489a93a18072a42b16c4.jpg",
+                            CoursePrice = 0,
+                            CourseTitle = "آموزش JavaScript برای مبتدیان",
+                            CreateDate = new DateTime(2019, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DemoFileName = "javascript-demo.mp4",
+                            GroupId = -4,
+                            LevelId = -1,
+                            StatusId = -2,
+                            SubGroup = -402,
+                            Tags = "JavaScript,Programming,Free Course,Beginners",
+                            TeacherId = -4
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseComment", b =>
@@ -156,6 +350,602 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("CourseEpisodes");
+
+                    b.HasData(
+                        new
+                        {
+                            EpisodeId = -1,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 45, 0, 0),
+                            EpisodeTitle = "معرفی دوره و نصب پیش‌نیازها",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -2,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 15, 0, 0),
+                            EpisodeTitle = "آشنایی با معماری ASP.NET Core",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -3,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "Routing و Middleware در ASP.NET Core",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -4,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 0, 0, 0),
+                            EpisodeTitle = "آموزش کامل MVC Pattern",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -5,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 45, 0, 0),
+                            EpisodeTitle = "Entity Framework Core و Database First",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -6,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 15, 0, 0),
+                            EpisodeTitle = "سیستم احراز هویت با Identity",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -7,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "SignalR و برنامه‌های Real-time",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -8,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 20, 0, 0),
+                            EpisodeTitle = "تست نویسی و Unit Testing",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -9,
+                            CourseId = -1,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 10, 0, 0),
+                            EpisodeTitle = "Deployment و DevOps",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -10,
+                            CourseId = -2,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 50, 0, 0),
+                            EpisodeTitle = "مقدمه‌ای بر RESTful API",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -11,
+                            CourseId = -2,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 25, 0, 0),
+                            EpisodeTitle = "طراحی Endpointهای حرفه‌ای",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -12,
+                            CourseId = -2,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 15, 0, 0),
+                            EpisodeTitle = "Versioning در Web API",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -13,
+                            CourseId = -2,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 45, 0, 0),
+                            EpisodeTitle = "Documentation با Swagger",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -14,
+                            CourseId = -2,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 0, 0, 0),
+                            EpisodeTitle = "امنیت با JWT و OAuth2",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -15,
+                            CourseId = -2,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "Caching و Performance",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -16,
+                            CourseId = -3,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 0, 0, 0),
+                            EpisodeTitle = "آشنایی با React و مفاهیم پایه",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -17,
+                            CourseId = -3,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 20, 0, 0),
+                            EpisodeTitle = "Components و JSX",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -18,
+                            CourseId = -3,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 35, 0, 0),
+                            EpisodeTitle = "State و Props",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -19,
+                            CourseId = -3,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 45, 0, 0),
+                            EpisodeTitle = "Hooks - useState و useEffect",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -20,
+                            CourseId = -3,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 15, 0, 0),
+                            EpisodeTitle = "Routing با React Router",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -21,
+                            CourseId = -3,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "State Management با Context API",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -22,
+                            CourseId = -3,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 0, 0, 0),
+                            EpisodeTitle = "آموزش Redux برای State Management پیشرفته",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -23,
+                            CourseId = -4,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 40, 0, 0),
+                            EpisodeTitle = "معرفی TypeScript و مزایای آن",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -24,
+                            CourseId = -4,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 10, 0, 0),
+                            EpisodeTitle = "Types و Type Annotations",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -25,
+                            CourseId = -4,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 25, 0, 0),
+                            EpisodeTitle = "Interfaces و Custom Types",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -26,
+                            CourseId = -4,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "Generics در TypeScript",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -27,
+                            CourseId = -4,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 45, 0, 0),
+                            EpisodeTitle = "Integration با React",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -28,
+                            CourseId = -5,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 55, 0, 0),
+                            EpisodeTitle = "معرفی Android Studio و Kotlin",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -29,
+                            CourseId = -5,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 0, 0, 0),
+                            EpisodeTitle = "آموزش Kotlin Fundamentals",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -30,
+                            CourseId = -5,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 40, 0, 0),
+                            EpisodeTitle = "Activity و Fragment",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -31,
+                            CourseId = -5,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "Layoutها و UI Design",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -32,
+                            CourseId = -5,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 15, 0, 0),
+                            EpisodeTitle = "Android Jetpack Components",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -33,
+                            CourseId = -5,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 50, 0, 0),
+                            EpisodeTitle = "کار با Room Database",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -34,
+                            CourseId = -5,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 35, 0, 0),
+                            EpisodeTitle = "Networking و API Calls",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -35,
+                            CourseId = -6,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 50, 0, 0),
+                            EpisodeTitle = "معرفی React Native و محیط توسعه",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -36,
+                            CourseId = -6,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 20, 0, 0),
+                            EpisodeTitle = "Components و JSX در React Native",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -37,
+                            CourseId = -6,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "Styling و Layout در React Native",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -38,
+                            CourseId = -6,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 45, 0, 0),
+                            EpisodeTitle = "Navigation بین صفحات",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -39,
+                            CourseId = -6,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 0, 0, 0),
+                            EpisodeTitle = "State Management در React Native",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -40,
+                            CourseId = -6,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 40, 0, 0),
+                            EpisodeTitle = "کار با Native Modules",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -41,
+                            CourseId = -7,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 45, 0, 0),
+                            EpisodeTitle = "معرفی SQL Server و نصب",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -42,
+                            CourseId = -7,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "آموزش SELECT و Query نویسی",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -43,
+                            CourseId = -7,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 0, 0, 0),
+                            EpisodeTitle = "JOINها و روابط بین جداول",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -44,
+                            CourseId = -7,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 45, 0, 0),
+                            EpisodeTitle = "Stored Procedures و Functions",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -45,
+                            CourseId = -7,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 50, 0, 0),
+                            EpisodeTitle = "Indexing و Performance Tuning",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -46,
+                            CourseId = -8,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 40, 0, 0),
+                            EpisodeTitle = "معرفی MongoDB و NoSQL",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -47,
+                            CourseId = -8,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 35, 0, 0),
+                            EpisodeTitle = "CRUD Operations در MongoDB",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -48,
+                            CourseId = -8,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 10, 0, 0),
+                            EpisodeTitle = "Aggregation Framework",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -49,
+                            CourseId = -8,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 25, 0, 0),
+                            EpisodeTitle = "Indexing و Performance",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -50,
+                            CourseId = -9,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 50, 0, 0),
+                            EpisodeTitle = "معرفی Docker و Containerization",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -51,
+                            CourseId = -9,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "Docker Fundamentals و Basic Commands",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -52,
+                            CourseId = -9,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 45, 0, 0),
+                            EpisodeTitle = "Docker Compose و Multi-Container Apps",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -53,
+                            CourseId = -9,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 0, 0, 0),
+                            EpisodeTitle = "Container Orchestration",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -54,
+                            CourseId = -10,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 35, 0, 0),
+                            EpisodeTitle = "معرفی Figma و محیط کار",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -55,
+                            CourseId = -10,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 20, 0, 0),
+                            EpisodeTitle = "اصول Design و User Research",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -56,
+                            CourseId = -10,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 40, 0, 0),
+                            EpisodeTitle = "Wireframing و Prototyping",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -57,
+                            CourseId = -10,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "Design Systems در Figma",
+                            IsFree = false
+                        },
+                        new
+                        {
+                            EpisodeId = -58,
+                            CourseId = -11,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 45, 0, 0),
+                            EpisodeTitle = "معرفی HTML و ساختار صفحات وب",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -59,
+                            CourseId = -11,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 15, 0, 0),
+                            EpisodeTitle = "آموزش HTML5 Semantics",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -60,
+                            CourseId = -11,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 30, 0, 0),
+                            EpisodeTitle = "CSS3 Fundamentals و Styling",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -61,
+                            CourseId = -11,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 2, 0, 0, 0),
+                            EpisodeTitle = "Flexbox و Grid Layout",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -62,
+                            CourseId = -12,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 0, 40, 0, 0),
+                            EpisodeTitle = "معرفی JavaScript و کاربردهای آن",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -63,
+                            CourseId = -12,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 10, 0, 0),
+                            EpisodeTitle = "Variables و Data Types",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -64,
+                            CourseId = -12,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 25, 0, 0),
+                            EpisodeTitle = "Functions و Scope",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -65,
+                            CourseId = -12,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 45, 0, 0),
+                            EpisodeTitle = "DOM Manipulation",
+                            IsFree = true
+                        },
+                        new
+                        {
+                            EpisodeId = -66,
+                            CourseId = -12,
+                            EpisodeFileName = "b18e2bb8068dd9bc9881b6eacd7eba0421611010-360p.zip",
+                            EpisodeTime = new TimeSpan(0, 1, 20, 0, 0),
+                            EpisodeTitle = "Events و Event Handling",
+                            IsFree = true
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseGroup", b =>
@@ -182,6 +972,442 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("ParentId");
 
                     b.ToTable("CourseGroups");
+
+                    b.HasData(
+                        new
+                        {
+                            GroupId = -1,
+                            GroupTitle = "برنامه نویسی موبایل",
+                            IsDelete = false
+                        },
+                        new
+                        {
+                            GroupId = -2,
+                            GroupTitle = "برنامه‌نویسی وب",
+                            IsDelete = false
+                        },
+                        new
+                        {
+                            GroupId = -3,
+                            GroupTitle = "برنامه نویسی تحت ویندوز",
+                            IsDelete = false
+                        },
+                        new
+                        {
+                            GroupId = -4,
+                            GroupTitle = "طراحی سایت",
+                            IsDelete = false
+                        },
+                        new
+                        {
+                            GroupId = -5,
+                            GroupTitle = "بانک های اطلاعاتی",
+                            IsDelete = false
+                        },
+                        new
+                        {
+                            GroupId = -6,
+                            GroupTitle = "سئو",
+                            IsDelete = false
+                        },
+                        new
+                        {
+                            GroupId = -7,
+                            GroupTitle = "سیستم عامل",
+                            IsDelete = false
+                        },
+                        new
+                        {
+                            GroupId = -101,
+                            GroupTitle = "اندروید (Android)",
+                            IsDelete = false,
+                            ParentId = -1
+                        },
+                        new
+                        {
+                            GroupId = -102,
+                            GroupTitle = "iOS",
+                            IsDelete = false,
+                            ParentId = -1
+                        },
+                        new
+                        {
+                            GroupId = -103,
+                            GroupTitle = "React Native",
+                            IsDelete = false,
+                            ParentId = -1
+                        },
+                        new
+                        {
+                            GroupId = -104,
+                            GroupTitle = "Flutter",
+                            IsDelete = false,
+                            ParentId = -1
+                        },
+                        new
+                        {
+                            GroupId = -105,
+                            GroupTitle = "Xamarin",
+                            IsDelete = false,
+                            ParentId = -1
+                        },
+                        new
+                        {
+                            GroupId = -106,
+                            GroupTitle = "Ionic",
+                            IsDelete = false,
+                            ParentId = -1
+                        },
+                        new
+                        {
+                            GroupId = -107,
+                            GroupTitle = "Kotlin",
+                            IsDelete = false,
+                            ParentId = -1
+                        },
+                        new
+                        {
+                            GroupId = -108,
+                            GroupTitle = "Swift",
+                            IsDelete = false,
+                            ParentId = -1
+                        },
+                        new
+                        {
+                            GroupId = -201,
+                            GroupTitle = "ASP.NET Core",
+                            IsDelete = false,
+                            ParentId = -2
+                        },
+                        new
+                        {
+                            GroupId = -202,
+                            GroupTitle = "PHP Laravel",
+                            IsDelete = false,
+                            ParentId = -2
+                        },
+                        new
+                        {
+                            GroupId = -203,
+                            GroupTitle = "Django",
+                            IsDelete = false,
+                            ParentId = -2
+                        },
+                        new
+                        {
+                            GroupId = -204,
+                            GroupTitle = "Spring Boot",
+                            IsDelete = false,
+                            ParentId = -2
+                        },
+                        new
+                        {
+                            GroupId = -205,
+                            GroupTitle = "Node.js",
+                            IsDelete = false,
+                            ParentId = -2
+                        },
+                        new
+                        {
+                            GroupId = -206,
+                            GroupTitle = "Ruby on Rails",
+                            IsDelete = false,
+                            ParentId = -2
+                        },
+                        new
+                        {
+                            GroupId = -207,
+                            GroupTitle = "Frontend Development",
+                            IsDelete = false,
+                            ParentId = -2
+                        },
+                        new
+                        {
+                            GroupId = -208,
+                            GroupTitle = "Full Stack Development",
+                            IsDelete = false,
+                            ParentId = -2
+                        },
+                        new
+                        {
+                            GroupId = -301,
+                            GroupTitle = "Windows Forms",
+                            IsDelete = false,
+                            ParentId = -3
+                        },
+                        new
+                        {
+                            GroupId = -302,
+                            GroupTitle = "WPF",
+                            IsDelete = false,
+                            ParentId = -3
+                        },
+                        new
+                        {
+                            GroupId = -303,
+                            GroupTitle = "UWP",
+                            IsDelete = false,
+                            ParentId = -3
+                        },
+                        new
+                        {
+                            GroupId = -304,
+                            GroupTitle = "Console Applications",
+                            IsDelete = false,
+                            ParentId = -3
+                        },
+                        new
+                        {
+                            GroupId = -305,
+                            GroupTitle = "Windows Services",
+                            IsDelete = false,
+                            ParentId = -3
+                        },
+                        new
+                        {
+                            GroupId = -306,
+                            GroupTitle = "WinUI",
+                            IsDelete = false,
+                            ParentId = -3
+                        },
+                        new
+                        {
+                            GroupId = -401,
+                            GroupTitle = "HTML & CSS",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -402,
+                            GroupTitle = "JavaScript",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -403,
+                            GroupTitle = "jQuery",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -404,
+                            GroupTitle = "Bootstrap",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -405,
+                            GroupTitle = "Tailwind CSS",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -406,
+                            GroupTitle = "SASS/SCSS",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -407,
+                            GroupTitle = "UI/UX Design",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -408,
+                            GroupTitle = "Figma",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -409,
+                            GroupTitle = "Adobe XD",
+                            IsDelete = false,
+                            ParentId = -4
+                        },
+                        new
+                        {
+                            GroupId = -501,
+                            GroupTitle = "SQL Server",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -502,
+                            GroupTitle = "MySQL",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -503,
+                            GroupTitle = "PostgreSQL",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -504,
+                            GroupTitle = "Oracle",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -505,
+                            GroupTitle = "MongoDB",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -506,
+                            GroupTitle = "Redis",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -507,
+                            GroupTitle = "SQLite",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -508,
+                            GroupTitle = "Database Design",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -509,
+                            GroupTitle = "NoSQL Databases",
+                            IsDelete = false,
+                            ParentId = -5
+                        },
+                        new
+                        {
+                            GroupId = -601,
+                            GroupTitle = "سئو داخلی (On-Page SEO)",
+                            IsDelete = false,
+                            ParentId = -6
+                        },
+                        new
+                        {
+                            GroupId = -602,
+                            GroupTitle = "سئو خارجی (Off-Page SEO)",
+                            IsDelete = false,
+                            ParentId = -6
+                        },
+                        new
+                        {
+                            GroupId = -603,
+                            GroupTitle = "سئو تکنیکال (Technical SEO)",
+                            IsDelete = false,
+                            ParentId = -6
+                        },
+                        new
+                        {
+                            GroupId = -604,
+                            GroupTitle = "سئو محلی (Local SEO)",
+                            IsDelete = false,
+                            ParentId = -6
+                        },
+                        new
+                        {
+                            GroupId = -605,
+                            GroupTitle = "تحقیق کلمات کلیدی",
+                            IsDelete = false,
+                            ParentId = -6
+                        },
+                        new
+                        {
+                            GroupId = -606,
+                            GroupTitle = "آموزش Google Analytics",
+                            IsDelete = false,
+                            ParentId = -6
+                        },
+                        new
+                        {
+                            GroupId = -607,
+                            GroupTitle = "آموزش Google Search Console",
+                            IsDelete = false,
+                            ParentId = -6
+                        },
+                        new
+                        {
+                            GroupId = -608,
+                            GroupTitle = "سئو اپلیکیشن",
+                            IsDelete = false,
+                            ParentId = -6
+                        },
+                        new
+                        {
+                            GroupId = -701,
+                            GroupTitle = "Windows",
+                            IsDelete = false,
+                            ParentId = -7
+                        },
+                        new
+                        {
+                            GroupId = -702,
+                            GroupTitle = "Linux",
+                            IsDelete = false,
+                            ParentId = -7
+                        },
+                        new
+                        {
+                            GroupId = -703,
+                            GroupTitle = "macOS",
+                            IsDelete = false,
+                            ParentId = -7
+                        },
+                        new
+                        {
+                            GroupId = -704,
+                            GroupTitle = "Virtualization",
+                            IsDelete = false,
+                            ParentId = -7
+                        },
+                        new
+                        {
+                            GroupId = -705,
+                            GroupTitle = "Docker",
+                            IsDelete = false,
+                            ParentId = -7
+                        },
+                        new
+                        {
+                            GroupId = -706,
+                            GroupTitle = "Kubernetes",
+                            IsDelete = false,
+                            ParentId = -7
+                        },
+                        new
+                        {
+                            GroupId = -707,
+                            GroupTitle = "Shell Scripting",
+                            IsDelete = false,
+                            ParentId = -7
+                        },
+                        new
+                        {
+                            GroupId = -708,
+                            GroupTitle = "PowerShell",
+                            IsDelete = false,
+                            ParentId = -7
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseLevel", b =>
@@ -200,6 +1426,28 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasKey("LevelId");
 
                     b.ToTable("CourseLevels");
+
+                    b.HasData(
+                        new
+                        {
+                            LevelId = -1,
+                            LevelTitle = "مقدماتی"
+                        },
+                        new
+                        {
+                            LevelId = -2,
+                            LevelTitle = "متوسط"
+                        },
+                        new
+                        {
+                            LevelId = -3,
+                            LevelTitle = "پیشرفته"
+                        },
+                        new
+                        {
+                            LevelId = -4,
+                            LevelTitle = "فوق پیشرفته"
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseStatus", b =>
@@ -218,6 +1466,18 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasKey("StatusId");
 
                     b.ToTable("CourseStatuses");
+
+                    b.HasData(
+                        new
+                        {
+                            StatusId = -1,
+                            StatusTitle = "دوره در حال برگزاری است"
+                        },
+                        new
+                        {
+                            StatusId = -2,
+                            StatusTitle = "دوره به اتمام رسیده است"
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.CourseVote", b =>
@@ -379,6 +1639,109 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("ParentID");
 
                     b.ToTable("Permission");
+
+                    b.HasData(
+                        new
+                        {
+                            PermissionId = -1,
+                            PermissionTitle = "پنل مدیریت"
+                        },
+                        new
+                        {
+                            PermissionId = -2,
+                            ParentID = -1,
+                            PermissionTitle = "مدیریت کاربران"
+                        },
+                        new
+                        {
+                            PermissionId = -3,
+                            ParentID = -1,
+                            PermissionTitle = "مدیریت نقش ها"
+                        },
+                        new
+                        {
+                            PermissionId = -4,
+                            ParentID = -1,
+                            PermissionTitle = "مدیریت دوره‌ها"
+                        },
+                        new
+                        {
+                            PermissionId = -5,
+                            ParentID = -1,
+                            PermissionTitle = "مدیریت کدهای تخفیف"
+                        },
+                        new
+                        {
+                            PermissionId = -21,
+                            ParentID = -2,
+                            PermissionTitle = "افزودن کاربران"
+                        },
+                        new
+                        {
+                            PermissionId = -22,
+                            ParentID = -2,
+                            PermissionTitle = "ویرایش کاربران"
+                        },
+                        new
+                        {
+                            PermissionId = -23,
+                            ParentID = -2,
+                            PermissionTitle = "حذف کاربران"
+                        },
+                        new
+                        {
+                            PermissionId = -31,
+                            ParentID = -3,
+                            PermissionTitle = "افزودن نقش ها"
+                        },
+                        new
+                        {
+                            PermissionId = -32,
+                            ParentID = -3,
+                            PermissionTitle = "ویرایش نقش ها"
+                        },
+                        new
+                        {
+                            PermissionId = -33,
+                            ParentID = -3,
+                            PermissionTitle = "حذف نقش ها"
+                        },
+                        new
+                        {
+                            PermissionId = -41,
+                            ParentID = -4,
+                            PermissionTitle = "ایجاد دوره ها"
+                        },
+                        new
+                        {
+                            PermissionId = -42,
+                            ParentID = -4,
+                            PermissionTitle = "ویرایش دوره ها"
+                        },
+                        new
+                        {
+                            PermissionId = -43,
+                            ParentID = -4,
+                            PermissionTitle = "حذف دوره ها"
+                        },
+                        new
+                        {
+                            PermissionId = -51,
+                            ParentID = -5,
+                            PermissionTitle = "ایجاد کدهای تخفیف"
+                        },
+                        new
+                        {
+                            PermissionId = -52,
+                            ParentID = -5,
+                            PermissionTitle = "ویرایش کدهای تخفیف"
+                        },
+                        new
+                        {
+                            PermissionId = -53,
+                            ParentID = -5,
+                            PermissionTitle = "حذف کدهای تخفیف"
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Permissions.RolePermission", b =>
@@ -402,6 +1765,134 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("RolePermission");
+
+                    b.HasData(
+                        new
+                        {
+                            RP_Id = -1,
+                            PermissionId = -1,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -2,
+                            PermissionId = -2,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -3,
+                            PermissionId = -3,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -4,
+                            PermissionId = -4,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -5,
+                            PermissionId = -5,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -6,
+                            PermissionId = -21,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -7,
+                            PermissionId = -22,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -8,
+                            PermissionId = -23,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -9,
+                            PermissionId = -31,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -10,
+                            PermissionId = -32,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -11,
+                            PermissionId = -33,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -12,
+                            PermissionId = -41,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -13,
+                            PermissionId = -42,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -14,
+                            PermissionId = -43,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -15,
+                            PermissionId = -51,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -16,
+                            PermissionId = -52,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -17,
+                            PermissionId = -53,
+                            RoleId = -1
+                        },
+                        new
+                        {
+                            RP_Id = -18,
+                            PermissionId = -4,
+                            RoleId = -2
+                        },
+                        new
+                        {
+                            RP_Id = -19,
+                            PermissionId = -41,
+                            RoleId = -2
+                        },
+                        new
+                        {
+                            RP_Id = -20,
+                            PermissionId = -42,
+                            RoleId = -2
+                        },
+                        new
+                        {
+                            RP_Id = -21,
+                            PermissionId = -43,
+                            RoleId = -2
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Question.Answer", b =>
@@ -494,6 +1985,26 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasKey("RoleId");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            RoleId = -1,
+                            IsDelete = false,
+                            RoleTitle = "مدیر سایت"
+                        },
+                        new
+                        {
+                            RoleId = -2,
+                            IsDelete = false,
+                            RoleTitle = "استاد"
+                        },
+                        new
+                        {
+                            RoleId = -3,
+                            IsDelete = false,
+                            RoleTitle = "کاربر عادی"
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.User.User", b =>
@@ -539,6 +2050,56 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = -1,
+                            ActiveCode = "AdministratorActiveCode",
+                            Email = "Admin@Gmail.com",
+                            IsActive = true,
+                            IsDelete = false,
+                            Password = "26-DC-31-89-42-68-58-72-CF-79-C5-EB-96-C9-BB-13",
+                            RegisterDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserAvatar = "427b6fa79ef542f2956586ec88990c8d.jpg",
+                            UserName = "Administrator"
+                        },
+                        new
+                        {
+                            UserId = -2,
+                            ActiveCode = "MahdiAminiActiveCode",
+                            Email = "MahdiAmini@Gmail.com",
+                            IsActive = true,
+                            IsDelete = false,
+                            Password = "20-2C-B9-62-AC-59-07-5B-96-4B-07-15-2D-23-4B-70",
+                            RegisterDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserAvatar = "ed75d864648641f3b5440d43447470bc.jpg",
+                            UserName = "مهدی امینی"
+                        },
+                        new
+                        {
+                            UserId = -3,
+                            ActiveCode = "NazaninActiveCode",
+                            Email = "Nazanin@Gmail.com",
+                            IsActive = true,
+                            IsDelete = false,
+                            Password = "20-2C-B9-62-AC-59-07-5B-96-4B-07-15-2D-23-4B-70",
+                            RegisterDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserAvatar = "46895918151d44069832d66cbb880534.jpg",
+                            UserName = "نازنین سهروردی"
+                        },
+                        new
+                        {
+                            UserId = -4,
+                            ActiveCode = "RezaActiveCode",
+                            Email = "Reza@Gmail.com",
+                            IsActive = true,
+                            IsDelete = false,
+                            Password = "20-2C-B9-62-AC-59-07-5B-96-4B-07-15-2D-23-4B-70",
+                            RegisterDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserAvatar = "c5c426500629418a8093b899d2deaced.jpg",
+                            UserName = "رضا جویباری"
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.User.UserDiscountCode", b =>
@@ -585,6 +2146,38 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UR_Id = -1,
+                            RoleId = -1,
+                            UserId = -1
+                        },
+                        new
+                        {
+                            UR_Id = -2,
+                            RoleId = -2,
+                            UserId = -1
+                        },
+                        new
+                        {
+                            UR_Id = -3,
+                            RoleId = -2,
+                            UserId = -2
+                        },
+                        new
+                        {
+                            UR_Id = -4,
+                            RoleId = -2,
+                            UserId = -3
+                        },
+                        new
+                        {
+                            UR_Id = -5,
+                            RoleId = -2,
+                            UserId = -4
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Wallet.Wallet", b =>
@@ -639,6 +2232,18 @@ namespace TopLearn.DataLayer.Migrations
                     b.HasKey("TypeId");
 
                     b.ToTable("WalletTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            TypeId = -1,
+                            TypeTitle = "واریز"
+                        },
+                        new
+                        {
+                            TypeId = -2,
+                            TypeTitle = "برداشت"
+                        });
                 });
 
             modelBuilder.Entity("TopLearn.DataLayer.Entities.Course.Course", b =>

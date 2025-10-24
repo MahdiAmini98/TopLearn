@@ -12,36 +12,36 @@
 </div>
 
 <div class="row">
-<form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data">
 
 
 
-    <div class="form-group">
-        <label>کد تخفیف </label>
-        <input type="text" asp-for="Discount.DiscountCode" class="form-control">
-        <div id="alertCode" class="alert alert-danger" style="display: none">
-            <p class="text-muted">کد وارد شده معتبر نمی باشد</p>
+        <div class="form-group">
+            <label>کد تخفیف </label>
+            <input type="text" asp-for="Discount.DiscountCode" class="form-control">
+            <div id="alertCode" class="alert alert-danger" style="display: none">
+                <p class="text-muted">کد وارد شده معتبر نمی باشد</p>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label>درصد کد تخفیف </label>
-        <input type="number" asp-for="Discount.DiscountPercent" class="form-control">
-    </div>
-    <div class="form-group">
-        <label>تعداد </label>
-        <input type="number" asp-for="Discount.UsableCount" class="form-control">
-    </div>
-    <div class="form-group">
-        <label>تاریخ شروع </label>
-        <input  id="stDate" name="stDate"/>
-    </div>
-    <div class="form-group">
-        <label>تاریخ پایان </label>
-        <input  id="edDate" name="edDate"/>
-    </div>
-    <input type="submit" value="ذخیره اطلاعات" class="btn btn-success" />
+        <div class="form-group">
+            <label>درصد کد تخفیف </label>
+            <input type="number" asp-for="Discount.DiscountPercent" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>تعداد </label>
+            <input type="number" asp-for="Discount.UsableCount" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>تاریخ شروع </label>
+            <input id="stDate" name="stDate" />
+        </div>
+        <div class="form-group">
+            <label>تاریخ پایان </label>
+            <input id="edDate" name="edDate" />
+        </div>
+        <input type="submit" value="ذخیره اطلاعات" class="btn btn-success" />
 
-</form>
+    </form>
 </div>
 
 @section Scripts

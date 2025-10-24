@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using TopLearn.Core.DTOs;
+using TopLearn.Core.DTOs.MockPayment;
 using TopLearn.Core.Services.Interfaces;
 
 namespace TopLearn.Web.Areas.UserPanel.Controllers
@@ -14,14 +17,16 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
     public class WalletController : Controller
     {
         private IUserService _userService;
+        private readonly IConfiguration _configuration;
+        private readonly IMockPaymentService _mockPaymentService;
 
-        public WalletController(IUserService userService)
+        public WalletController(IUserService userService, IConfiguration configuration, IMockPaymentService mockPaymentService)
         {
             _userService = userService;
+            _configuration = configuration;
+            _mockPaymentService = mockPaymentService;
         }
 
-
-        
         [Route("UserPanel/Wallet")]
         public IActionResult Index()
         {
@@ -39,23 +44,30 @@ namespace TopLearn.Web.Areas.UserPanel.Controllers
                 return View(charge);
             }
 
-            int walletId = _userService.ChargeWallet(User.Identity.Name,charge.Amount,"شارژ حساب");
+            int walletId = _userService.ChargeWallet(User.Identity.Name, charge.Amount, "شارژ حساب");
 
-            #region Online Payment
-
-            var payment = new ZarinpalSandbox.Payment(charge.Amount);
-
-            var res =  payment.PaymentRequest("شارژ کیف پول", "https://localhost:44349/OnlinePayment/" + walletId,"Info@topLearn.Com","09197070750");
-
-            if (res.Result.Status == 100)
+            #region Mock Payment
+            var paymentRequest = new MockPaymentRequest
             {
-                return Redirect("https://sandbox.zarinpal.com/pg/StartPay/" + res.Result.Authority);
-            }
+                Amount = charge.Amount,
+                CallbackUrl = Url.Action("PaymentResult", "MockPayment", new { area = "UserPanel" }, Request.Scheme),
+                Description = "شارژ کیف پول",
+                Email = "Info@topLearn.Com",
+                Mobile = "09197070750",
+                WalletId = walletId
+            };
 
+            var paymentResult = _mockPaymentService.CreatePaymentRequest(paymentRequest);
+
+            if (paymentResult.Success)
+            {
+                return RedirectToAction("Pay", "MockPayment", new { area = "UserPanel", authority = paymentResult.Authority });
+            }
             #endregion
 
-
-            return null;
+            ModelState.AddModelError("", "خطا در ایجاد درگاه پرداخت");
+            ViewBag.ListWallet = _userService.GetWalletUser(User.Identity.Name);
+            return View(charge);
         }
     }
 }

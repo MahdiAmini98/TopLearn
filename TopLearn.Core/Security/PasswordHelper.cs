@@ -4,15 +4,11 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace TopLearn.Core.Security
 {
     public static class PasswordHelper
     {
-
-
-
         public static string EncodePasswordMd5(string pass) //Encrypt using MD5   
         {
             Byte[] originalBytes;
@@ -25,7 +21,5 @@ namespace TopLearn.Core.Security
             //Convert encoded bytes back to a 'readable' string   
             return BitConverter.ToString(encodedBytes);
         }
-
-
     }
 }

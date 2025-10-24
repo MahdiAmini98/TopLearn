@@ -7,7 +7,7 @@
 <div class="container">
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="https://localhost:44349/">تاپ لرن</a></li>
+            <li class="breadcrumb-item"><a href="#">تاپ لرن</a></li>
             <li class="breadcrumb-item active"><a href="#">دوره ها</a></li>
             <li class="breadcrumb-item active" aria-current="page"> برنامه نویسی وب </li>
         </ul>
@@ -16,7 +16,7 @@
 
 <div class="container">
     <form id="formFilter" action="/Course" method="get">
-        <input type="hidden" id="pageid" name="pageId" value="@ViewBag.pageId.ToString()"/>
+        <input type="hidden" id="pageid" name="pageId" value="@ViewBag.pageId.ToString()" />
         <section class="term-categories">
 
             <div class="top-bar">
@@ -36,7 +36,7 @@
                         <div class="switch-field available">
                             <input id="available-filter-1" name="getType" value="all" checked="" type="radio">
                             <label for="available-filter-1"> همه </label>
-                            <input id="available-filter-2" name="getType" value="buy" type="radio">
+                            <input id="available-filter-2" name="getType" value="price" type="radio">
                             <label for="available-filter-2"> خریدنی </label>
                             <input id="available-filter-3" name="getType" value="free" type="radio">
                             <label for="available-filter-3"> رایگان </label>
@@ -67,8 +67,8 @@
                             <div class="price-bar">
                                 <div id="priceFilter"></div>
                             </div>
-                            <div class="max-price">تا <span id="max-text">5,000,000</span> تومان</div>
-                            <div class="min-price">از <span id="min-text">2,0000</span> تومان</div>
+                            <div class="max-price">تا <span id="max-text">500000</span> تومان</div>
+                            <div class="min-price">از <span id="min-text">20000</span> تومان</div>
                             <div class="clearfix"></div>
                         </div>
                     </section>
@@ -83,26 +83,26 @@
                                 List<int> selected = ViewBag.selectedGroups as List<int>;
                             }
                             <ul>
-                               @foreach (var group in groups.Where(g=>g.ParentId==null))
-                               {
-                                   <li>
-                                       <input onchange="changeGroup()" type="checkbox" @((selected.Any(s=>s==group.GroupId)?"checked":"")) name="selectedGroups" value="@group.GroupId" id="cat-1">
-                                       <label for="cat-1"> @group.GroupTitle </label>
-                                   @if (groups.Any(g => g.ParentId == group.GroupId))
-                                   {
-                                       <ul>
-                                           @foreach (var sub in groups.Where(g=>g.ParentId==group.GroupId))
-                                           {
-                                               <li>
-                                                   <input onchange="changeGroup()" @((selected.Any(s=>s==sub.GroupId)?"checked":"")) type="checkbox" name="selectedGroups" value="@sub.GroupId" id="cat-1">
-                                                   <label for="cat-1"> @sub.GroupTitle </label>
-                                               </li>
-                                           }
-                                       </ul>
-                                   }
+                                @foreach (var group in groups.Where(g => g.ParentId == null))
+                                {
+                                    <li>
+                                        <input onchange="changeGroup()" type="checkbox" @((selected.Any(s => s == group.GroupId) ? "checked" : "")) name="selectedGroups" value="@group.GroupId" id="cat-1">
+                                        <label for="cat-1"> @group.GroupTitle </label>
+                                        @if (groups.Any(g => g.ParentId == group.GroupId))
+                                        {
+                                            <ul>
+                                                @foreach (var sub in groups.Where(g => g.ParentId == group.GroupId))
+                                                {
+                                                    <li>
+                                                        <input onchange="changeGroup()" @((selected.Any(s => s == sub.GroupId) ? "checked" : "")) type="checkbox" name="selectedGroups" value="@sub.GroupId" id="cat-1">
+                                                        <label for="cat-1"> @sub.GroupTitle </label>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        }
 
-                                       </li>
-                               }
+                                    </li>
+                                }
                             </ul>
                         </div>
                     </section>
@@ -115,7 +115,7 @@
                         <div class="row">
                             @foreach (var item in Model.Item1)
                             {
-                                <partial name="_BoxCourse" model="@item"/>
+                                <partial name="_BoxCourse" model="@item" />
                             }
                         </div>
 
@@ -124,12 +124,12 @@
                         {
                             <nav aria-label="Page navigation">
                                 <ul class="pagination justify-content-center">
-                           
-                            @for(int i=1;i<= (int)Model.Item2; i++)
-                            {
-                                <li class="page-item"><a class="page-link" onclick="changePage(@i)" href="#">@i</a></li>
-  
-                            }
+
+                                    @for (int i = 1; i <= (int)Model.Item2; i++)
+                                    {
+                                        <li class="page-item"><a class="page-link" onclick="changePage(@i)" href="#">@i</a></li>
+
+                                    }
                                 </ul>
                             </nav>
                         }
@@ -142,7 +142,7 @@
     </form>
 </div>
 
-@section Scripts{
+@section Scripts {
     <script src="/css/noUiSlider/nouislider.min.js"></script>
     <script src="/js/script.js"></script>
     <script type="text/javascript">
@@ -156,13 +156,13 @@
 
             var slider = document.getElementById('priceFilter');
             noUiSlider.create(slider, {
-                start: [50000, 1000000],
-                step: 50000,
+                start: [20000, 100000],
+                step: 5000,
                 connect: true,
                 direction: 'rtl',
                 range: {
-                    'min': 50000,
-                    'max': 1000000
+                    'min': 20000,
+                    'max': 100000
                 }
             });
 
@@ -200,7 +200,7 @@
                 //updateSliderRange( Math.round(values[0]), Math.round(values[1]) );
             });
 
-       
+
 
             function updateSliderRange(min, max) {
                 slider.noUiSlider.updateOptions({

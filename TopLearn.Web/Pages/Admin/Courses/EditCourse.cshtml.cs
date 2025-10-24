@@ -12,7 +12,7 @@ using TopLearn.DataLayer.Entities.Course;
 
 namespace TopLearn.Web.Pages.Admin.Courses
 {
-    [PermissionChecker(12)]
+    [PermissionChecker(-42)]
     public class EditCourseModel : PageModel
     {
         private ICourseService _courseService;
